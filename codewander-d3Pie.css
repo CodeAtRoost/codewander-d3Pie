@@ -1,0 +1,144 @@
+.qv-object-codewander-d3Pie .css_bars_row {
+	transition: all 0.3s ease;
+	float: left;
+	width: 98%;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f0f0f0;
+	margin-bottom: 2px;
+	border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+	cursor: pointer;
+}
+
+.qv-object-codewander-d3Pie .css_bars_bar {
+	float: left;
+	clear: left;
+	height: 30px;
+	background-color: #5f5f5f;
+}
+
+.qv-object-codewander-d3Pie .css_bars_bar span {
+	font-weight: bold;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 7px;
+	color: #f0f0f0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 90%;
+	white-space: nowrap;
+}
+
+.qv-object-codewander-d3Pie .css_bars_per {
+	position: relative;
+}
+
+.qv-object-codewander-d3Pie .css_bars_per span {
+	font-weight: bold;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.qv-object-codewander-d3Pie .css_bars_per span.over {
+	position: absolute;
+	right: 15px;
+	color: #f0f0f0;
+}
+
+.qv-object-codewander-d3Pie .css_bars_row:hover, .qv-object-codewander-d3Pie .css_bars_row.selected {
+	border: 1px solid #000;
+}
+
+
+/* Add shadow effect to chart. If you don't like it, get rid of it. */
+svg {
+    -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.3) );
+    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.25) );
+}
+
+/*Styling for the lines connecting the labels to the slices*/
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+/* Make the percentage on the text labels bold*/
+.labelName tspan {
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* In biology we generally italicise species names. */
+.labelName {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+
+
+/* D3 */
+
+.d3pieChart {
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow:hidden;
+}
+.metric {
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  width: 100%;
+  height: 20%;
+  position: relative;
+  top:0%;
+  overflow:auto;
+  z-index:6;
+  background:transparent;
+}
+svg {
+	width: 100%;
+	height: 100%;
+}
+
+path.slice{
+	stroke-width:2px;
+}
+
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+}
+
+.labelValue
+{
+	font-size: 60%;
+	opacity: .5;
+	
+}
+
+.toolTip {
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    /*font: 12px sans-serif;*/
+    padding: 5px;
+    text-align: center;
+}
+text {
+  font-size: 12px ;
+}
